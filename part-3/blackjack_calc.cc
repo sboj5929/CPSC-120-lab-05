@@ -1,4 +1,13 @@
-
+// Steven BojLuna
+// CPSC 120-18
+// 2021-10-08
+// sboj5929@csu.fullerton.edu
+// @sboj5929
+//
+// Lab 05-03
+//
+// This program lets you play black jack. 
+//
 #include <iostream>
 #include <string>
 #include <vector>
@@ -17,8 +26,15 @@ using namespace std;
 int NumericValue(const string &face_value) {
   int numeric_value = 0;
 
-  // TODO: Implement the function
-
+  if ((face_value == "1") || (face_value == "K") || (face_value == "k") ||
+      (face_value == "Q") || (face_value == "q") || (face_value == "J") ||
+      (face_value == "j")) {
+    numeric_value = 10;
+  } else if ((face_value == "A") || (face_value == "a")) {
+    numeric_value = 11;
+  } else {
+    numeric_value = stoi(face_value);
+  }
   return numeric_value;
 }
 
@@ -75,12 +91,20 @@ int main(int argc, char const *argv[]) {
   int card_two_value = 0;
   int sum = 0;
   // TODO: Find the valuEes of card_one and card_two
+  card_one_value = FaceValue;
+  card_two_value = FaceValue;
 
-  // TODO: If both cards are aces, subtract 10 from the sum
+ // TODO: If both cards are aces, subtract 10 from the sum
+ if (card_one_value = "A") {
+   card_one_value - 10;
+ }
+ if (card_two_value = "A") {
+   card_two - 10;
+ }
+ // TODO: Sum the value of the cards
+ sum = card_one_value + card_two_value;
 
-  // TODO: Sum the value of the cards
+ cout << card_one_value << " + " << card_two_value << " = " << sum << "\n";
 
-  cout << card_one << " + " << card_two << " = " << sum << "\n";
-
-  return 0;
+ return 0;
 }
