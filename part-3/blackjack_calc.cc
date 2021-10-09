@@ -6,7 +6,7 @@
 //
 // Lab 05-03
 //
-// This program lets you play black jack. 
+// This program lets you play black jack.
 //
 #include <iostream>
 #include <string>
@@ -91,20 +91,17 @@ int main(int argc, char const *argv[]) {
   int card_two_value = 0;
   int sum = 0;
   // TODO: Find the valuEes of card_one and card_two
-  card_one_value = FaceValue;
-  card_two_value = FaceValue;
+  card_one = NumericValue(FaceValue(card_one));
+  card_two = NumericValue(FaceValue(card_two));
 
  // TODO: If both cards are aces, subtract 10 from the sum
- if (card_one_value = "A") {
-   card_one_value - 10;
- }
- if (card_two_value = "A") {
-   card_two - 10;
+ if (card_one + card_two == 22) {
+   A + A == -10;
  }
  // TODO: Sum the value of the cards
  sum = card_one_value + card_two_value;
 
- cout << card_one_value << " + " << card_two_value << " = " << sum << "\n";
+ cout << card_one << " + " << card_two << " = " << sum << "\n";
 
  return 0;
 }
