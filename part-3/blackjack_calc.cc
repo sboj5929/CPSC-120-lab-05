@@ -90,18 +90,15 @@ int main(int argc, char const *argv[]) {
   int card_one_value = 0;
   int card_two_value = 0;
   int sum = 0;
-  // TODO: Find the valuEes of card_one and card_two
-  card_one = NumericValue(FaceValue(card_one));
-  card_two = NumericValue(FaceValue(card_two));
 
- // TODO: If both cards are aces, subtract 10 from the sum
- if (card_one + card_two == 22) {
-   A + A == -10;
- }
- // TODO: Sum the value of the cards
- sum = card_one_value + card_two_value;
+  card_one_value = NumericValue(FaceValue(card_one));
+  card_two_value = NumericValue(FaceValue(card_two));
 
- cout << card_one << " + " << card_two << " = " << sum << "\n";
+  sum = card_one_value + card_two_value;
+  if (sum == 22) {
+    sum = sum - 10;
+  }
+  cout << card_one << " + " << card_two << " = " << sum << "\n";
 
- return 0;
+  return 0;
 }
